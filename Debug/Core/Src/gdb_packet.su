@@ -1,0 +1,6 @@
+gdb_packet.c:33:5:gdb_getpacket	40	static
+gdb_packet.c:135:6:gdb_putpacket	32	static
+gdb_packet.c:176:6:gdb_putpacket_f	24	static
+gdb_packet.c:189:6:gdb_out	40	dynamic
+gdb_packet.c:200:6:gdb_voutf	24	static
+gdb_packet.c:210:6:gdb_outf	16	static

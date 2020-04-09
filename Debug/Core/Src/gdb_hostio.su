@@ -1,0 +1,13 @@
+gdb_hostio.c:29:5:hostio_reply	56	static
+gdb_hostio.c:50:5:hostio_open	32	static
+gdb_hostio.c:58:5:hostio_close	16	static
+gdb_hostio.c:64:5:hostio_read	24	static
+gdb_hostio.c:71:5:hostio_write	24	static
+gdb_hostio.c:78:6:hostio_lseek	24	static
+gdb_hostio.c:85:5:hostio_rename	32	static
+gdb_hostio.c:94:5:hostio_unlink	24	static
+gdb_hostio.c:101:5:hostio_stat	24	static
+gdb_hostio.c:108:5:hostio_fstat	24	static
+gdb_hostio.c:114:5:hostio_gettimeofday	24	static
+gdb_hostio.c:121:5:hostio_isatty	16	static
+gdb_hostio.c:127:5:hostio_system	24	static

@@ -1,0 +1,3 @@
+hex_utils.c:29:8:hexify	32	static
+hex_utils.c:43:16:unhex_digit	24	static
+hex_utils.c:53:8:unhexify	32	static

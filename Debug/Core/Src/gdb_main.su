@@ -1,0 +1,8 @@
+gdb_main.c:59:13:gdb_target_destroy_callback	16	static
+gdb_main.c:69:13:gdb_target_printf	24	static
+gdb_main.c:94:5:gdb_main_loop	152	dynamic
+gdb_main.c:327:1:handle_q_string_reply	40	dynamic
+gdb_main.c:348:13:handle_q_packet	1072	dynamic
+gdb_main.c:415:1:handle_v_packet	40	static
+gdb_main.c:483:1:handle_z_packet	40	static
+gdb_main.c:511:6:gdb_main	8	static
