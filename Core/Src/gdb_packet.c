@@ -62,7 +62,7 @@ int gdb_getpacket(char *packet, int size)
 
 					case REMOTE_EOM: /* Complete packet for processing */
 						packet[i]=0;
-						remotePacketProcess(i,packet);
+						//remotePacketProcess(i,packet);
 						gettingRemotePacket=false;
 						break;
 

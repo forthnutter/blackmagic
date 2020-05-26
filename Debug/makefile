@@ -9,6 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include target/subdir.mk
+-include platforms/common/subdir.mk
 -include USB_DEVICE/Target/subdir.mk
 -include USB_DEVICE/App/subdir.mk
 -include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
@@ -37,6 +38,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 blackmagic.list \
 
+OBJCOPY_BIN += \
+blackmagic.bin \
+
 
 # All Target
 all: blackmagic.elf secondary-outputs
@@ -57,12 +61,17 @@ blackmagic.list: $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+blackmagic.bin: $(EXECUTABLES)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "blackmagic.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
 	-$(RM) *
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
 
 .PHONY: all clean dependents
 .SECONDARY:

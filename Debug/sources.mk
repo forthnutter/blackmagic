@@ -13,6 +13,7 @@ OBJDUMP_LIST :=
 EXECUTABLES := 
 OBJS := 
 C_DEPS := 
+OBJCOPY_BIN := 
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
@@ -23,5 +24,6 @@ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 USB_DEVICE/App \
 USB_DEVICE/Target \
+platforms/common \
 target \
 

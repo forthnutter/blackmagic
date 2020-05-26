@@ -1,0 +1,3 @@
+cdcacm.c:471:5:cdcacm_get_config	4	static
+cdcacm.c:476:5:cdcacm_get_dtr	4	static
+cdcacm.c:540:6:cdcacm_init	8	static

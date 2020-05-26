@@ -26,7 +26,7 @@
 #include "usb_device.h"
 #include "usbd_cdc.h"
 #include "usbd_cdc_if.h"
-//#include "cdcacm.h"
+#include "cdcacm.h"
 #include "gdb_if.h"
 
 static uint32_t count_out;
@@ -83,7 +83,7 @@ void gdb_usb_out_cb(usbd_device *dev, uint8_t ep)
 
 static void gdb_if_update_buf(void)
 {
-//	while (cdcacm_get_config() != 1);
+	while (cdcacm_get_config() != 1);
 #ifdef STM32F4
 	asm volatile ("cpsid i; isb");
 	if (count_new) {
@@ -107,8 +107,8 @@ unsigned char gdb_if_getchar(void)
 
 	while (!(out_ptr < count_out)) {
 		/* Detach if port closed */
-//		if (!cdcacm_get_dtr())
-//			return 0x04;
+		if (!cdcacm_get_dtr())
+			return 0x04;
 
 		gdb_if_update_buf();
 	}

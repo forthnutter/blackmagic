@@ -1,4 +1,4 @@
 gdb_if.c:42:6:gdb_if_putchar	16	static
-gdb_if.c:84:13:gdb_if_update_buf	4	static
+gdb_if.c:84:13:gdb_if_update_buf	8	static
 gdb_if.c:105:15:gdb_if_getchar	8	static
 gdb_if.c:119:15:gdb_if_getchar_to	16	static
